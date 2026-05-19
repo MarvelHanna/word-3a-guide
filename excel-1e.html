@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel 1E — Pet Product Sales</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1><a href="index.html">←</a> Excel 1E</h1>
+  <div class="counter"><span id="cur">1</span> / <span id="total">14</span></div>
+</header>
+
+<main id="main">
+
+<section class="step active">
+  <div class="points">Step 2 — 5 pts</div>
+  <h2>Vapor Trail theme</h2>
+  <ol>
+    <li><strong>Page Layout → Themes → Themes</strong>. Click <strong>Vapor Trail</strong>.</li>
+    <li>Not there? <strong>Browse for Themes…</strong> → pick <code>Vapor Trail.thmx</code> from the assignment folder.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 3 — 6 pts</div>
+  <h2>Fill May and June (B3 → D3)</h2>
+  <ol>
+    <li>Click <strong>B3</strong> (should already say <code>April</code>).</li>
+    <li>Drag the fill handle right to <strong>D3</strong>. C3 fills as <code>May</code>, D3 as <code>June</code>.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 4 — 12 pts</div>
+  <h2>Merge, center, style</h2>
+  <ol>
+    <li>Select <strong>A1:F1</strong>. <strong>Home → Merge & Center</strong>. With merged A1 active: <strong>Cell Styles → Title</strong>.</li>
+    <li>Select <strong>A2:F2</strong>. <strong>Merge & Center</strong>. <strong>Cell Styles → Heading 1</strong>.</li>
+    <li>Select <strong>B3:F3</strong>. <strong>Home → Alignment → Center</strong>.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 5 — 6 pts</div>
+  <h2>Widths + missing data</h2>
+  <ol>
+    <li>Click column <strong>A</strong> header. <strong>Home → Cells → Format → Column Width → 22 → OK</strong>.</li>
+    <li>Drag-select columns <strong>B through F</strong>. <strong>Format → Column Width → 16 → OK</strong>.</li>
+    <li>In row 7 (the row missing data), enter:</li>
+  </ol>
+  <ul>
+    <li>B7: <strong>112727.85</strong></li>
+    <li>C7: <strong>121691.64</strong></li>
+    <li>D7: <strong>128964.64</strong></li>
+  </ul>
+</section>
+
+<section class="step">
+  <div class="points">Step 6 — 9 pts</div>
+  <h2>AutoSum row 8 + column E</h2>
+  <ol>
+    <li>Click <strong>B8</strong>. Press <kbd>Cmd+Shift+T</kbd> (AutoSum). Confirm on the Formula Bar checkmark.</li>
+    <li>Click <strong>B8</strong> again. Drag fill handle right to <strong>D8</strong>.</li>
+    <li>Click <strong>E4</strong>. Press <kbd>Cmd+Shift+T</kbd>. Confirm.</li>
+    <li>Click <strong>E4</strong> again. Drag fill handle down to <strong>E8</strong>.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 7 — 8 pts</div>
+  <h2>Heading 4 + Total + AutoFit</h2>
+  <ol>
+    <li>Select <strong>B3:F3</strong>, Cmd-click <strong>A4:A7</strong>. <strong>Cell Styles → Heading 4</strong>.</li>
+    <li>Select <strong>B8:E8</strong>. <strong>Cell Styles → Total</strong>.</li>
+    <li>Click column <strong>A</strong> header. <strong>Home → Cells → Format → AutoFit Column Width</strong>.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 8 — 8 pts</div>
+  <h2>Number formats</h2>
+  <ol>
+    <li>Select <strong>B4:E4</strong> and Cmd-click <strong>B8:E8</strong>. <strong>Home → Number → Accounting Number Format</strong> ($).</li>
+    <li>Select <strong>B5:E7</strong>. <strong>Home → Number → Comma Style</strong> (,).</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 9 — 10 pts</div>
+  <h2>Insert chart</h2>
+  <ol>
+    <li>Select <strong>A3:D7</strong> (no totals).</li>
+    <li><strong>Insert → Charts → Recommended Charts</strong>.</li>
+    <li>Pick the <strong>Clustered Column</strong> chart with <strong>months along the bottom</strong> and <strong>product names in the legend</strong>. OK.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 10 — 5 pts</div>
+  <h2>Position chart at A10</h2>
+  <ol>
+    <li>Drag the chart so its upper-left corner sits in cell <strong>A10</strong>, approximately under "and" in row 7.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 11 — 5 pts</div>
+  <h2>Chart Style 13 + colors + title</h2>
+  <ol>
+    <li>With the chart selected: <strong>Chart Design → Chart Styles → Style 13</strong> (hover tooltips to confirm).</li>
+    <li><strong>Chart Design → Change Colors → Colorful</strong> → <strong>second row</strong>.</li>
+    <li>Click the chart title placeholder. Paste:</li>
+  </ol>
+  <div class="copy-block">
+    <pre id="copy11">2nd Quarter Pet Product Sales</pre>
+    <button class="copy-btn" data-target="copy11">Copy Title</button>
+  </div>
+</section>
+
+<section class="step">
+  <div class="points">Step 12 — 10 pts</div>
+  <h2>Sparklines + markers + style</h2>
+  <ol>
+    <li>Select <strong>B4:D7</strong>.</li>
+    <li><strong>Insert → Sparklines → Line</strong>.</li>
+    <li><strong>Location Range</strong>: <code>F4:F7</code>. OK.</li>
+    <li>With F4:F7 selected: <strong>Sparkline → Show → Markers</strong> ON.</li>
+    <li><strong>Sparkline → Style gallery</strong> → <strong>first row, second style</strong>.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 13 — 8 pts</div>
+  <h2>Center horizontally + footer</h2>
+  <ol>
+    <li>Click <strong>A1</strong>. <strong>Page Layout → Page Setup → Margins → Custom Margins</strong>.</li>
+    <li>Margins tab → check <strong>Horizontally</strong> under "Center on page".</li>
+    <li>Header/Footer tab → <strong>Custom Footer</strong>. Left section → click <strong>Insert File Name</strong> icon. <code>&[File]</code> appears. OK → OK.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">Step 14 — 8 pts</div>
+  <h2>Landscape + properties</h2>
+  <ol>
+    <li><strong>File → Print</strong>. Settings → switch <strong>Portrait</strong> to <strong>Landscape Orientation</strong>. Esc out.</li>
+    <li>Apple menu: <strong>File → Properties → Summary</strong>. Fill:</li>
+  </ol>
+  <div class="copy-block">
+    <pre id="copy14a">pet product sales</pre>
+    <button class="copy-btn" data-target="copy14a">Copy Keywords</button>
+  </div>
+  <div class="copy-block">
+    <pre id="copy14b">CAS 50, #ON1</pre>
+    <button class="copy-btn" data-target="copy14b">Copy Subject</button>
+  </div>
+  <div class="copy-block">
+    <pre id="copy14c">Marvel Hanna</pre>
+    <button class="copy-btn" data-target="copy14c">Copy Author</button>
+  </div>
+  <ol start="3"><li>OK.</li></ol>
+</section>
+
+<section class="step">
+  <div class="points">Done</div>
+  <h2>Save &amp; submit</h2>
+  <ol>
+    <li><kbd>Cmd+S</kbd></li>
+    <li><kbd>Cmd+Q</kbd> to quit Excel.</li>
+    <li>Upload <strong>Hanna_Excel_1E_Pet_Product_Sales.xlsx</strong> to MyLab IT.</li>
+  </ol>
+  <div class="note">Common fails: Vapor Trail not applied, Landscape not stuck, footer typed instead of inserted, sparkline style or Markers missed.</div>
+</section>
+
+</main>
+
+<nav>
+  <button id="back">Back</button>
+  <select class="jump-select" id="jump"></select>
+  <button id="next">Next</button>
+</nav>
+
+<script>
+  window.STEP_KEY = 'excel1e-cur';
+  window.STEP_TITLES = [
+    '1. Vapor Trail theme',
+    '2. Fill May/June',
+    '3. Merge + styles',
+    '4. Widths + data',
+    '5. AutoSum',
+    '6. Heading 4 + Total',
+    '7. Number formats',
+    '8. Insert chart',
+    '9. Position chart',
+    '10. Chart style/title',
+    '11. Sparklines',
+    '12. Center + footer',
+    '13. Landscape + properties',
+    '14. Save & submit'
+  ];
+</script>
+<script src="nav.js"></script>
+</body>
+</html>
