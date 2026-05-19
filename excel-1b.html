@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel 1B — Seasoning Products</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1><a href="index.html">←</a> Excel 1B</h1>
+  <div class="counter"><span id="cur">1</span> / <span id="total">11</span></div>
+</header>
+
+<main id="main">
+
+<section class="step active">
+  <div class="points">1.18 — 20 pts</div>
+  <h2>Title, subtitle, labels, styles</h2>
+  <ol>
+    <li>Click <strong>A1</strong>. Type and Return:</li>
+  </ol>
+  <div class="copy-block">
+    <pre id="copy18a">The Easy Pantry</pre>
+    <button class="copy-btn" data-target="copy18a">Copy A1</button>
+  </div>
+  <div class="copy-block">
+    <pre id="copy18b">Inventory of Seasoning Best Sellers</pre>
+    <button class="copy-btn" data-target="copy18b">Copy A2</button>
+  </div>
+  <ol start="2">
+    <li>Click <strong>A3</strong>, press <strong>Tab</strong> to land in <strong>B3</strong>. Type each header, Tab after each (Return after F3):</li>
+  </ol>
+  <ul>
+    <li>B3: <strong>Quantity</strong></li>
+    <li>C3: <strong>Average Cost</strong></li>
+    <li>D3: <strong>Retail Price</strong></li>
+    <li>E3: <strong>Total Retail Value</strong></li>
+    <li>F3: <strong>Percent of Total Retail Value</strong></li>
+  </ul>
+  <ol start="3">
+    <li>In <strong>A4:A10</strong>, type each row label, Return after each:</li>
+  </ol>
+  <ul>
+    <li>A4: <strong>Ground Cinnamon</strong></li>
+    <li>A5: <strong>Ground Ginger</strong></li>
+    <li>A6: <strong>Box Sea Salt</strong></li>
+    <li>A7: <strong>Himalayan Pink Salt</strong></li>
+    <li>A8: <strong>Taco Seasoning</strong></li>
+    <li>A9: <strong>Granulated Garlic</strong></li>
+    <li>A10: <strong>Total Retail Value for All Products</strong></li>
+  </ul>
+  <ol start="4">
+    <li>Click anywhere in column A. <strong>Home → Cells → Format → Column Width → 31 → OK</strong>.</li>
+    <li>Select <strong>A1:F1</strong>. <strong>Merge & Center → Cell Styles → Title</strong>.</li>
+    <li>Select <strong>A2:F2</strong>. <strong>Merge & Center → Cell Styles → Heading 1</strong>.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">1.19 — 10 pts</div>
+  <h2>Quantity, Average Cost, Retail Price</h2>
+  <ol>
+    <li>Select <strong>B4:D9</strong> (creates a range; Enter wraps within it).</li>
+    <li>Type values down column B, Return after each (B4 → B5 → ... → B9, then wraps to C4):</li>
+  </ol>
+  <table>
+    <tr><th></th><th>B (Qty)</th><th>C (Avg Cost)</th><th>D (Retail)</th></tr>
+    <tr><th>4 Cinnamon</th><td>315</td><td>8.95</td><td>19.85</td></tr>
+    <tr><th>5 Ginger</th><td>275</td><td>9.98</td><td>21.95</td></tr>
+    <tr><th>6 Box Salt</th><td>280</td><td>22.50</td><td>50.75</td></tr>
+    <tr><th>7 Pink Salt</th><td>188</td><td>20.75</td><td>47.95</td></tr>
+    <tr><th>8 Taco</th><td>245</td><td>22.95</td><td>48.00</td></tr>
+    <tr><th>9 Garlic</th><td>165</td><td>26.50</td><td>49.95</td></tr>
+  </table>
+</section>
+
+<section class="step">
+  <div class="points">1.20 — 10 pts</div>
+  <h2>Total Retail Value formulas</h2>
+  <ol>
+    <li><strong>E4</strong>: type <code>=B4*D4</code>, Return. (Result: 6252.75)</li>
+    <li>Click <strong>E4</strong> again. Drag the fill handle down to <strong>E9</strong>. Each row auto-fills as <code>=B5*D5</code>, etc.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">1.21 — 10 pts</div>
+  <h2>Total of totals in E10</h2>
+  <ol>
+    <li>Select <strong>E4:E9</strong>.</li>
+    <li><strong>Home → Editing → AutoSum (Σ)</strong>. Result lands in <strong>E10</strong>: <code>=SUM(E4:E9)</code> = 55515.35.</li>
+    <li>Click <strong>E10</strong>. Apply <strong>Bold</strong> (<kbd>Cmd+B</kbd>).</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">1.22 — 5 pts</div>
+  <h2>Percent formulas (absolute reference)</h2>
+  <ol>
+    <li>Click <strong>F4</strong>. Type the formula below exactly — the dollar signs are mandatory:</li>
+  </ol>
+  <div class="copy-block">
+    <pre id="copy22">=E4/$E$10</pre>
+    <button class="copy-btn" data-target="copy22">Copy Formula</button>
+  </div>
+  <ol start="2">
+    <li>Press Return.</li>
+    <li>Click <strong>F4</strong> again. Drag the fill handle down to <strong>F9</strong>. Each row stays anchored to $E$10 as the divisor.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">1.23 — 5 pts</div>
+  <h2>Edit values + subtitle</h2>
+  <ol>
+    <li>Click <strong>B6</strong>. Type <code>325</code>, Return.</li>
+    <li>Double-click <strong>D8</strong>. Change <code>48.00</code> to <code>42.00</code>, Return.</li>
+    <li>Double-click <strong>A2</strong>. Position cursor before <em>Inventory</em>. Type <code>Case </code> (with trailing space). Subtitle reads:</li>
+  </ol>
+  <div class="copy-block">
+    <pre id="copy23a">Case Inventory of Seasoning Best Sellers</pre>
+    <button class="copy-btn" data-target="copy23a">Copy A2</button>
+  </div>
+  <ol start="4">
+    <li>Double-click <strong>B3</strong>. Change <em>Quantity</em> to:</li>
+  </ol>
+  <div class="copy-block">
+    <pre id="copy23b">Quantity in Stock (Case)</pre>
+    <button class="copy-btn" data-target="copy23b">Copy B3</button>
+  </div>
+  <ol start="5"><li>Return.</li></ol>
+</section>
+
+<section class="step">
+  <div class="points">1.24 — 5 pts</div>
+  <h2>Percent style</h2>
+  <ol>
+    <li>Select <strong>F4:F9</strong>.</li>
+    <li><strong>Home → Number → Percent Style</strong> (% button).</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">1.25 — 15 pts</div>
+  <h2>Insert row, insert column, delete column</h2>
+  <ol>
+    <li>Click any cell in <strong>row 3</strong>. <strong>Home → Cells → Insert → Insert Sheet Rows</strong>. New empty row 3.</li>
+    <li>Click <strong>A3</strong>. Type:</li>
+  </ol>
+  <div class="copy-block">
+    <pre id="copy25a">As of September 30</pre>
+    <button class="copy-btn" data-target="copy25a">Copy A3</button>
+  </div>
+  <ol start="3">
+    <li>Confirm on the Formula Bar checkmark. Select <strong>A3:F3</strong>. <strong>Merge & Center → Cell Styles → Heading 2</strong>.</li>
+    <li>Click any cell in <strong>column B</strong> below the merged rows. <strong>Home → Cells → Insert → Insert Sheet Columns</strong>. New empty column B.</li>
+    <li>Click <strong>B4</strong>. Type <code>Production</code>, Return.</li>
+    <li>Continue down column B, Return after each:</li>
+  </ol>
+  <ul>
+    <li>B5: <strong>Organic</strong></li>
+    <li>B6: <strong>Organic</strong></li>
+    <li>B7: <strong>Conventional</strong></li>
+    <li>B8: <strong>Conventional</strong></li>
+    <li>B9: <strong>Conventional</strong></li>
+    <li>B10: <strong>Organic</strong></li>
+  </ul>
+  <ol start="7">
+    <li>Click any cell in <strong>column D</strong> (Average Cost after the shift). <strong>Home → Cells → Delete → Delete Sheet Columns</strong>.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">1.26 — 10 pts</div>
+  <h2>Column widths + wrap text + Heading 4</h2>
+  <ol>
+    <li>Drag-select column headers <strong>B through F</strong>.</li>
+    <li><strong>Home → Cells → Format → Column Width → 13 → OK</strong>.</li>
+    <li>Select <strong>B4:F4</strong> (the header row).</li>
+    <li><strong>Home → Alignment → Wrap Text</strong>.</li>
+    <li>With B4:F4 still selected: click <strong>Center</strong> (horizontal) then <strong>Middle Align</strong> (vertical) in the Alignment group.</li>
+    <li><strong>Cell Styles → Heading 4</strong>.</li>
+  </ol>
+</section>
+
+<section class="step">
+  <div class="points">1.27 — 10 pts</div>
+  <h2>Green colors, footer, center, properties, Landscape</h2>
+  <ol>
+    <li><strong>Page Layout → Themes → Colors → Green</strong>.</li>
+    <li><strong>Page Layout → Page Setup → Margins → Custom Margins</strong>.</li>
+    <li>Margins tab → check <strong>Horizontally</strong> under "Center on page".</li>
+    <li>Header/Footer tab → <strong>Custom Footer</strong>. Left section → click <strong>Insert File Name</strong> icon. OK → OK.</li>
+    <li>Apple menu: <strong>File → Properties → Summary</strong>. Fill:</li>
+  </ol>
+  <div class="copy-block">
+    <pre id="copy27a">seasoning best sellers inventory</pre>
+    <button class="copy-btn" data-target="copy27a">Copy Keywords</button>
+  </div>
+  <div class="copy-block">
+    <pre id="copy27b">CAS 50, #ON1</pre>
+    <button class="copy-btn" data-target="copy27b">Copy Subject</button>
+  </div>
+  <div class="copy-block">
+    <pre id="copy27c">Marvel Hanna</pre>
+    <button class="copy-btn" data-target="copy27c">Copy Author</button>
+  </div>
+  <ol start="6">
+    <li>OK.</li>
+    <li><strong>File → Print</strong>. In Settings, switch <strong>Portrait</strong> to <strong>Landscape Orientation</strong>.</li>
+    <li>Esc to back out of Print.</li>
+  </ol>
+  <div class="note">Landscape is easy to miss — verify it stuck before saving.</div>
+</section>
+
+<section class="step">
+  <div class="points">Done</div>
+  <h2>Save &amp; submit</h2>
+  <ol>
+    <li><kbd>Cmd+S</kbd></li>
+    <li><kbd>Cmd+Q</kbd> to quit Excel.</li>
+    <li>Upload <strong>Hanna_Excel_1B_Seasoning_Products.xlsx</strong> to MyLab IT Grader Project.</li>
+  </ol>
+  <div class="note">Most common fails: missing $ in F4 formula, Landscape not applied, Average Cost column not deleted.</div>
+</section>
+
+</main>
+
+<nav>
+  <button id="back">Back</button>
+  <select class="jump-select" id="jump"></select>
+  <button id="next">Next</button>
+</nav>
+
+<script>
+  window.STEP_KEY = 'excel1b-cur';
+  window.STEP_TITLES = [
+    '1. Title + labels + styles',
+    '2. Enter data',
+    '3. Total Retail formulas',
+    '4. Total of totals',
+    '5. Percent formula',
+    '6. Edit values + subtitle',
+    '7. Percent style',
+    '8. Insert/delete row+cols',
+    '9. Widths + wrap + style',
+    '10. Green + footer + landscape',
+    '11. Save & submit'
+  ];
+</script>
+<script src="nav.js"></script>
+</body>
+</html>
